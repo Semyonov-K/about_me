@@ -34,6 +34,6 @@ jobs:
           export KUBE_CONFIG=.kube/config
 
       - name: Deploy to Kubernetes
-        uses: actions-hub/kubectl@master
+        uses: appleboy/kubectl-action@master
         with:
           args: apply -f .kube/
