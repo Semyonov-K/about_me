@@ -30,8 +30,8 @@ jobs:
           tags: fixer2011/about_me:latest
 
       - name: Setup config
-        with:
-          args: export KUBE_CONFIG=.kube/config
+        run: |
+          export KUBE_CONFIG=.kube/config
 
       - name: Deploy to Kubernetes
         uses: actions-hub/kubectl@master
